@@ -1,4 +1,6 @@
 'use strict'
 
-console.log(process.env.REDIS_URL, 123)
+import config from './config'
+
+console.log(process.env.REDIS_URL, config)
 
