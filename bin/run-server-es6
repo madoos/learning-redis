@@ -1,0 +1,6 @@
+# !bin/bash
+
+CLI=node_modules/.bin
+
+REDIS_URL='1234ipredis' \
+$CLI/nodemon index.js --exec $CLI/babel-node --presets  es2015,stage-2

@@ -1,0 +1,3 @@
+# !bin/bas
+
+docker run --name some-redis -d redis

@@ -1,0 +1,53 @@
+{
+  "name":  "learning-redis",
+  "version": "0.0.1",
+  "description": "Learning basic concepts in Redis",
+  "main": "index.js",
+  "scripts": {
+    "start": "bin/run-server-es6",
+    "test": "npm run lint && npm run cover:unit",
+    "test:unit": "./bin/test/unit",
+    "test:int": "./bin/test/int",
+    "cover": "./bin/test/cover",
+    "cover:unit": "./bin/test/cover-unit",
+    "lint": "./bin/test/linter",
+    "serve:coverage": "./bin/serve/coverage",
+    "serve:linter": "./bin/serve/linter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madoos/learnig-redis"
+  },
+
+  "keywords": [
+    "lib"
+  ],
+   "author": {
+    "name": "Maurice Domínguez",
+    "email": "maurice.ronet.dominguez@gmail.com",
+    "url": "https://github.com/madoos/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madoos/learnig-redis/issues"
+  },
+  "homepage": "https://github.com/madoos/learnig-redis#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "standard": "^8.6.0",
+    "nodemon": "^1.11.0",
+    "http-server": "^0.9.0"
+  },
+
+  "standard":  {
+    "env": {
+      "node": true,
+      "mocha": true
+    }
+  }
+}
