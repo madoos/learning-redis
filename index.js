@@ -9,4 +9,6 @@ redis
 .on('error', (err) => console.log('Error =>', err))
 .on('connect', () => console.log('Redis Connected'))
 
-redis.run('test', [], []).then(console.log.bind(console))
+redis.run('test', [], [])
+.then(console.log.bind(console))
+.catch(console.log.bind(console))

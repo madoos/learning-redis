@@ -1,0 +1,3 @@
+# !bin/bash
+
+docker exec -it redis_db redis-cli monitor
