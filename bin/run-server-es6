@@ -2,5 +2,7 @@
 
 CLI=node_modules/.bin
 
-REDIS_URL='0.0.0.0:6379' \
+#REDIS_URL='0.0.0.0:6379' \
+REDIS_HOST='0.0.0.0' \
+REDIS_PORT='6379' \
 $CLI/nodemon index.js --exec $CLI/babel-node --presets  es2015,stage-2

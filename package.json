@@ -1,5 +1,5 @@
 {
-  "name":  "learning-redis",
+  "name": "learning-redis",
   "version": "0.0.1",
   "description": "Learning basic concepts in Redis",
   "main": "index.js",
@@ -18,11 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/madoos/learnig-redis"
   },
-
   "keywords": [
     "lib"
   ],
-   "author": {
+  "author": {
     "name": "Maurice Domínguez",
     "email": "maurice.ronet.dominguez@gmail.com",
     "url": "https://github.com/madoos/"
@@ -43,11 +42,14 @@
     "nodemon": "^1.11.0",
     "http-server": "^0.9.0"
   },
-
-  "standard":  {
+  "standard": {
     "env": {
       "node": true,
       "mocha": true
     }
+  },
+  "dependencies": {
+    "redis": "^2.7.1",
+    "redis-scripto": "^0.1.3"
   }
 }

@@ -1,5 +1,9 @@
 'use strict'
 
+import path from 'path'
+
 export default {
-  REDIS_URL: process.env.REDIS_URL
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT,
+  scriptPaths: path.join(__dirname, '../src/LuaScripts')
 }

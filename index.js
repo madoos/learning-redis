@@ -1,6 +1,12 @@
 'use strict'
 
 import config from './config'
+import redisCreateClient from './src/redisCreateClient'
+const redis = redisCreateClient(config)
 
-console.log(process.env.REDIS_URL, config)
 
+redis
+.on('error', (err) => console.log('Error =>', err))
+.on('connect', () => console.log('Redis Connected'))
+
+redis.run('test', [], []).then(console.log.bind(console))
