@@ -32,6 +32,7 @@ redis.run('setMultiple', ['a', 'b', 'c'], ['test', [1, 2, 3], {a: 1, b: 2}])
 
 redis
 .loadModule('/functional.lua')
+.loadModule('/moduleTest.lua')
 .run('setMultiple', ['a', 'b', 'c'], ['test', [1, 2, 3], {a: 1, b: 2}])
 .then(JSON.parse)
 .then(show)
