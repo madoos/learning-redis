@@ -4,7 +4,7 @@ import redis from 'redis'
 import Scripto from 'redis-scripto'
 import type from 'madoos-type'
 import fs from 'fs'
-import redisEval from 'redis-eval'
+import util from './util'
 
 class RedisManager {
 
@@ -50,13 +50,12 @@ class RedisManager {
   loadModule (path) {
     const modulePath = this._config.scriptPaths + path
     const luaModule = fs.readFileSync(modulePath, 'utf8')
-  
-    this._client.eval(luaModule, 1, 2, function (err, reply) {
-      console.log(reply)
-    })
-
+    const loadScript = util.makeSync(this._client.eval, this._client)
+    const result = loadScript(luaModule, 1, 2)
+    console.log(result)
     return this
   }
+
 }
 
 export default function createClient (options) {

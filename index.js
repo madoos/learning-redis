@@ -30,12 +30,10 @@ redis.run('setMultiple', ['a', 'b', 'c'], ['test', [1, 2, 3], {a: 1, b: 2}])
 .catch(show)
 */
 
-redis.loadModule('/functional.lua')
-
-setTimeout(() => {
-  redis.run('setMultiple', ['a', 'b', 'c'], ['test', [1, 2, 3], {a: 1, b: 2}])
-  .then(JSON.parse)
-  .then(show)
-  .catch(show)
-}, 5000)
+redis
+.loadModule('/functional.lua')
+.run('setMultiple', ['a', 'b', 'c'], ['test', [1, 2, 3], {a: 1, b: 2}])
+.then(JSON.parse)
+.then(show)
+.catch(show)
 
